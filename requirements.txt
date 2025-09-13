@@ -1,23 +1,5 @@
-# Streamlit本体
-streamlit==1.41.1
-
-# OpenAI APIを使うため
-openai==0.28.0
-
-# LangChain LLM操作用
-langchain==0.3.27
-
-# .env ファイル読み込み用
-python-dotenv==1.0.1
-
-# データ処理で必要な最小限
-numpy==2.3.3
-pandas==2.3.2
-
 streamlit==1.41.1
 openai==0.28.0
 langchain==0.3.27
-langchain_community==0.0.26  # 安定版
+langchain_community==0.0.26
 python-dotenv==1.0.1
-numpy==2.3.3
-pandas==2.3.2
