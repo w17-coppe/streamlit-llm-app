@@ -39,7 +39,7 @@ typing_extensions==4.15.0
 tzdata==2025.2
 urllib3==2.5.0
 
-# 追加
-langchain==0.1.XX          # 実際に安定版のバージョンに置き換えてください
-openai==0.28.0             # 安定版を推奨
+# LLM関連
+langchain==0.1.182
+openai==1.27.8
 python-dotenv==1.0.1
