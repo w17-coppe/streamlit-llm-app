@@ -24,6 +24,7 @@ pyarrow==21.0.0
 pydeck==0.9.1
 Pygments==2.19.2
 python-dateutil==2.9.0.post0
+python-dotenv==1.1.1
 pytz==2025.2
 referencing==0.36.2
 requests==2.32.5
@@ -38,8 +39,3 @@ tornado==6.5.2
 typing_extensions==4.15.0
 tzdata==2025.2
 urllib3==2.5.0
-
-# LLM関連
-langchain==0.1.182
-openai==1.27.8
-python-dotenv==1.0.1
