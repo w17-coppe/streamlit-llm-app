@@ -1,5 +1,5 @@
 import streamlit as st
-from langchain.chat_models import ChatOpenAI
+from langchain_community.chat_models import ChatOpenAI
 from langchain.schema import HumanMessage, SystemMessage
 import logging
 from dotenv import load_dotenv
@@ -13,7 +13,11 @@ logger = logging.getLogger(__name__)
 load_dotenv()
 
 # Streamlit Secrets から取得、なければローカル環境変数を利用
-OPENAI_API_KEY = st.secrets.get("OPENAI_API_KEY") or os.getenv("OPENAI_API_KEY")
+OPENAI_API_KEY = st.secrets.get("OPENAI_API_KEY") if hasattr(st, "secrets") and "OPENAI_API_KEY" in st.secrets else os.getenv("OPENAI_API_KEY")
+
+if not OPENAI_API_KEY:
+    st.error("OpenAI APIキーが設定されていません。st.secretsまたは環境変数にAPIキーを設定してください。")
+    st.stop()
 
 # LLMの準備
 llm = ChatOpenAI(
